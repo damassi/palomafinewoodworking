@@ -5,9 +5,11 @@ import React from "react";
 export const Nav: React.FC<any> = ({ children }) => {
   return (
     <Flex alignItems="center" justifyContent="space-between">
-      <Text variant="xl" textAlign={"right"}>
-        Paloma Fine &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br /> Woodworking
-      </Text>
+      <Link href="/">
+        <Text variant="xl" textAlign={"right"}>
+          Paloma Fine &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br /> Woodworking
+        </Text>
+      </Link>
       <Flex justifyContent="flex-end" width="50%">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/work">Work</NavItem>
