@@ -4,8 +4,11 @@ import Head from "next/head";
 import { queryPage } from "utils/queryPage";
 
 const Home: NextPage = (props) => {
-  console.log(props);
-  return <Box>Home</Box>;
+  return (
+    <Box>
+      <Box>{/* <Image src={props.data.image.url} /> */}</Box>
+    </Box>
+  );
 };
 
 export default Home;

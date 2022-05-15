@@ -1,17 +1,22 @@
-import { Box, Flex, Text } from "@artsy/palette";
+import { Box, Flex, Separator, Text } from "@artsy/palette";
 import Link from "next/link";
 import React from "react";
 
 export const Nav: React.FC<any> = ({ children }) => {
   return (
-    <Flex alignItems="center" justifyContent="space-between">
+    <Flex
+      alignItems="center"
+      justifyContent="space-between"
+      flexDirection={["column"]}
+    >
       <Link href="/">
-        <Text variant="xl" textAlign={"right"}>
-          Paloma Fine &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br /> Woodworking
+        <Text variant="xl" textAlign={["center"]}>
+          Paloma Fine
+          <br /> Woodworking
         </Text>
       </Link>
-      <Flex justifyContent="flex-end" width="50%">
-        <NavItem href="/">Home</NavItem>
+      <Separator width="50%" mt={2} />
+      <Flex justifyContent={["center"]} mt={[2]} width="50%">
         <NavItem href="/work">Work</NavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/contact">Contact</NavItem>
