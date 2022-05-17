@@ -32,7 +32,12 @@ const NavItem: React.FC<{ children: React.ReactNode; href: string }> = ({
   return (
     <Box>
       <Link href={href}>
-        <Text variant="md" style={{ cursor: "pointer" }} px={1}>
+        <Text
+          variant="md"
+          style={{ cursor: "pointer" }}
+          px={1}
+          color="black100"
+        >
           {children}
         </Text>
       </Link>
