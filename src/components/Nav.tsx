@@ -9,17 +9,15 @@ export const Nav: React.FC<any> = ({ children }) => {
       justifyContent="space-between"
       flexDirection={["column"]}
     >
-      <Link href="/">
-        <Text variant="xl" textAlign={["center"]}>
-          Paloma Fine
-          <br /> Woodworking
+      <Flex justifyContent={["center"]} width="50%">
+        <Text variant="xs" color="black60" mt={2}>
+          <a href="mailto:james@palomafinewoodworking.com">
+            james@palomafinewoodworking.com
+          </a>
         </Text>
-      </Link>
-      <Separator width="50%" mt={2} />
-      <Flex justifyContent={["center"]} mt={[2]} width="50%">
-        <NavItem href="/work">Work</NavItem>
+        {/* <NavItem href="/work">Work</NavItem>
         <NavItem href="/about">About</NavItem>
-        <NavItem href="/contact">Contact</NavItem>
+        <NavItem href="/contact">Contact</NavItem> */}
       </Flex>
     </Flex>
   );
@@ -32,12 +30,7 @@ const NavItem: React.FC<{ children: React.ReactNode; href: string }> = ({
   return (
     <Box>
       <Link href={href}>
-        <Text
-          variant="md"
-          style={{ cursor: "pointer" }}
-          px={1}
-          color="black100"
-        >
+        <Text variant="md" style={{ cursor: "pointer" }} px={1} color="black60">
           {children}
         </Text>
       </Link>
